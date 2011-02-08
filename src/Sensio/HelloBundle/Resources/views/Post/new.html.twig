@@ -1,0 +1,18 @@
+{% extends "HelloBundle::layout.html.twig" %}
+
+{% block label %}
+    <label for="{{ field.id }}">
+        {{ label }}
+        {% if field.required %} *{% endif %}
+    </label>
+{% endblock %}
+
+{% block body %}
+    {% form_theme form _self %}
+
+    <form action="" method="post">
+        {{ form_field(form) }}
+
+        <input type="submit" value="Save" />
+    </form>
+{% endblock %}

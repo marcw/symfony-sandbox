@@ -7,9 +7,10 @@ app.config:
 
 webprofiler.config:
     toolbar: true
-    intercept_redirects: true
+    intercept_redirects: false
 
 zend.config:
     logger:
         priority: debug
+        path:     %kernel.logs_dir%/%kernel.environment%.log
         path:     %kernel.logs_dir%/%kernel.environment%.log

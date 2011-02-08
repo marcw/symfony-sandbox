@@ -2,5 +2,18 @@ homepage:
     pattern:  /
     defaults: { _controller: FrameworkBundle:Default:index }
 
-hello:
-    resource: @HelloBundle/Resources/config/routing.yml
+blog_home:
+    pattern: /blog/
+    defaults: { _controller: HelloBundle:Hello:index  }
+
+
+blog_create_post:
+    pattern: /blog/create
+    defaults: { _controller: HelloBundle:Hello:create }
+
+
+blog_post:
+    pattern:        /blog/{id}
+    defaults:       { _controller: HelloBundle:Hello:view }
+    requirements:
+        id: \d+
